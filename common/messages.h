@@ -634,6 +634,22 @@ typedef struct SpiceMsgcDisplayPreferredCompression {
     uint8_t image_compression;
 } SpiceMsgcDisplayPreferredCompression;
 
+typedef struct SpiceMsgDisplayGlScanoutUnix {
+    int fd;
+    uint32_t width;
+    uint32_t height;
+    uint32_t stride;
+    uint32_t format;
+    uint8_t flags;
+} SpiceMsgDisplayGlScanoutUnix;
+
+typedef struct SpiceMsgDisplayGlScanoutUpdate {
+    uint32_t x;
+    uint32_t y;
+    uint32_t w;
+    uint32_t h;
+} SpiceMsgDisplayGlScanoutUpdate;
+
 SPICE_END_DECLS
 
 #endif /* _H_SPICE_PROTOCOL */
